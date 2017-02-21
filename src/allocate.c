@@ -7,7 +7,6 @@
 FILE *fp_outcome4;
 int begin_transaction()
 {
-	printf("\nInside Begin Transaction\n");
 	int id, flag = 0;
 	int previous_id;
 	//char c;

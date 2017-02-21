@@ -18,9 +18,7 @@ void write_value(int data_id, int this_transaction_id, int corrupt_flag)
 	FILE *fp_version2, *fp_version3;
 
 	printf("\nEnter the value to be written to the file id %d\n",data_id);
-	//fgets (data, 15, stdin);
 	scanf("%s",data);
-	//printf("%s\n",data );
 	if (corrupt_flag == 0)
 	{
 		strcpy(temp, data);
@@ -29,12 +27,9 @@ void write_value(int data_id, int this_transaction_id, int corrupt_flag)
 		strcpy(temp, "Corrupt_Data");
 	}
 	
-	//printf("Temp - %s\n",temp );
 	strcpy(new_version.data, temp);
 	new_version.action_id = this_transaction_id;
 	new_version.data_id = data_id;
-
-	//printf("\nData in new version is %s\n", new_version.data);
 
 	fp_version2 = fopen("version_file6.bin","r+b");
 	while(fread(&update_version, sizeof(data_version), 1, fp_version2)==1 && !update)

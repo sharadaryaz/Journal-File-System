@@ -11,7 +11,7 @@ int main()
 	char c;
 	int data_arr[4], i = 0; 
 	cti = begin_transaction();
-	//cti = new_outcome_record();	  
+		  
 	printf("\nYour current Transaction ID is %d\n", cti);	
 	recover_fail_stop();
 	/*Asking the client to select the data ID's to which it would perform asctions*/
